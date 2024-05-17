@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geo Top</title>
+    <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap  -->
+    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <!-- Flexslider  -->
+    <!-- <link rel="stylesheet" href="css/flexslider.css"> -->
+    <!-- Flaticons  -->
+    <!-- <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css"> -->
+    <!-- Owl Carousel -->
+    <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+    <!-- <link rel="stylesheet" href="css/owl.theme.default.min.css"> -->
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Reset CSS */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.7s;
+        list-style: none;
+      }
+
+      body {
+        font-family: "Cairo", sans-serif;
+      }
+      header {
+        display: flex;
+      }
+      header,
+      footer {
+        background-image: linear-gradient(
+          to right,
+          blue,
+          rgb(116, 0, 199),
+          rgb(198, 0, 198)
+        );
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        height: 73px;
+        /* position: relative; */
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        z-index: 2;
+      }
+
+      nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav ul li ul {
+        display: none;
+        position: absolute;
+        background-color: blue;
+        border-radius: 12px;
+        padding: 0 15px;
+      }
+      nav ul li a {
+        font-size: 20px;
+      }
+      nav ul li:hover ul {
+        display: block;
+      }
+
+      nav ul li a {
+        color: black;
+      }
+      nav ul li ul li {
+        display: block;
+        padding: 2px 0;
+      }
+
+      nav ul li ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      a:hover {
+        color: rgb(0, 160, 255);
+      }
+      a i:hover {
+        color: rgb(0, 160, 255);
+      }
+      section {
+        text-align: center;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      footer p {
+        font-size: 0.8em;
+      }
+      /* Add your existing CSS styles here */
+      header .fa-solid {
+          display: none;
+        }    
+      
+      /* Responsive Styles */
+      @media only screen and (max-width: 768px) {
+        header h1 {
+          font-size: 1.5em;
+        }
+       .container nav {
+          position: absolute;
+          display: none;
+          z-index: 40;
+          top:72px;
+          left: 0;
+          right: 0;
+          background-image: linear-gradient(
+          to right,
+          blue,
+          rgb(116, 0, 199),
+          rgb(198, 0, 198)
+        );;
+        } 
+        nav.active {
+          display: block;
+        }
+        .container nav ul li {
+          text-align: center;
+        }
+        nav ul li ul {
+          display: block;
+          position: relative;
+          background-image: linear-gradient(
+          to right,
+          blue,
+          rgb(116, 0, 199),
+          rgb(198, 0, 198)
+        );
+        padding: 0;
+        margin: 0;
+        }
+        nav ul li ul li{
+        padding: 0;
+        margin: 0;
+        }
+        header .fa-solid{
+          display: block ;
+          font-size: 1.5em;
+        }
+        nav ul li {
+          display: block;
+          margin: 10px 0;
+          /* background-color: #fe53bb; */
+        }
+
+        /* section {
+          padding: 30px 0;
+        } */
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+      footer .container {
+        align-items: flex-start;
+        flex-direction: row;
+      }
+      .footer-section {
+        width: 33.33%;
+        float: left;
+      }
+      .footer-section h4 {
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .footer-section-navigation {
+        margin-left: 25px;
+      }
+      .footer-section-navigation > ul {
+        margin-bottom: 10px;
+        display: flex;
+      }
+      .footer-section-navigation > ul > li {
+        width: 120px;
+      }
+      .footer-section-navigation > ul > li:nth-child(2) {
+        width: 170px;
+      }
+      .footer-section-navigation > ul > li > a,
+      .footer-section h3 {
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .social-media-icons {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .social-media-icons li {
+        display: inline;
+        margin-right: 10px;
+      }
+
+      .social-media-icons li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 24px;
+      }
+      video {
+        width: 100%;
+        height: 700px;
+      }
+      
+      #video {
+        background-color: black;
+        position: relative;
+      }
+      #video .abs {
+        position: absolute;
+        top: 35%;
+        padding: 0 180px;
+      }
+      .abs h2 {
+        font-size: 35px;
+      }
+      .abs h3 {
+        font-size: 23px;
+      }
+      @media (max-width:922px) {
+        video {
+        width: 100%;
+        height: 500px;
+      }
+        #video .abs {
+        position: absolute;
+        top: 25%;
+        padding: 0 70px;
+      }
+      .abs h2 {
+        font-size: 23px;
+      }
+      .abs h3 {
+        font-size: 18px;
+      }
+      }
+      
+      @media (max-width:550px){
+        #video .abs {
+        position: absolute;
+        top: 25%;
+        padding: 0 20px;
+      }
+        .abs h2 {
+        font-size: 17px;
+      }
+      .abs h3 {
+        font-size: 12px;
+      }
+      }
+      .form-container {
+        max-width: 700px;
+        margin: 20px auto;
+        text-align: center;
+        padding: 2rem;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .form-container h1 {
+        color: #333;
+        font-size: 2em;
+        margin-bottom: 1rem;
+      }
+
+      label {
+        color: #333;
+        display: block;
+        font-weight: bold;
+        /* margin-top: 1rem; */
+      }
+
+      input,
+      textarea {
+        color: #333;
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+      }
+
+      textarea {
+        height: 10rem;
+        resize: none;
+      }
+
+      button {
+        background-image: linear-gradient(
+          to right,
+          blue,
+          rgb(116, 0, 199),
+          rgb(198, 0, 198)
+        );
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.7s;
+        opacity: 1;
+      }
+
+      button[type="submit"]:hover {
+        background-image: linear-gradient(
+          to right,
+          rgb(198, 0, 198),
+          rgb(116, 0, 199),
+          blue
+        );
+        color: rgb(0, 160, 255);
+        opacity: 0.8;
+      }
+      /* services  */
+      #services .cards {
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+      #services .cards .card:nth-child(odd) {
+        /* display: flex; */
+        max-width: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 19px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(
+          to right,
+          blue,
+          rgb(116, 0, 199),
+          rgb(198, 0, 198)
+        );
+      }
+      #services .cards .card:nth-child(even) {
+        /* display: flex; */
+        max-width: 300px;
+        margin: 0 auto;
+        background-color: #fff;
+        border-radius: 19px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-image: linear-gradient(
+          to right,
+          rgb(198, 0, 198),
+          rgb(116, 0, 199),
+          blue
+        );
+      }
+
+      .icon {
+        /* flex: 1; */
+        padding: 15px 15px 0 15px;
+      }
+
+      .icon img {
+        border-radius: 10px;
+        width: 270px;
+        height: 180px;
+      }
+
+      .details {
+        padding: 0 20px 20px 20px;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+
+      .shape {
+        background-color: #007bff;
+        border-radius: 50%;
+        position: relative;
+        transition: all 0.5s linear;
+      }
+      .circle {
+        width: 30px;
+        height: 30px;
+        background-color: #ff6347;
+        border-radius: 50%;
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s linear;
+        z-index: 1; /* تعيين قيمة z-index لضمان عرض الدائرة فوق الشكل الأساسي */
+      }
+      .shape2 {
+        position: relative;
+        transition: all 0.5s linear;
+      }
+      .square {
+        width: 30px;
+        height: 30px;
+        background-color: #ff6347;
+        /* border-radius: 50%; */
+        position: absolute;
+        top: 140px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.5s linear;
+        z-index: 1; /* تعيين قيمة z-index لضمان عرض الدائرة فوق الشكل الأساسي */
+      }
+
+      #ourproject {
+        margin: 0 50px;
+      }
+      .logo:hover a {
+        color: rgb(255, 0, 255);
+      }
+      .logo:hover {
+        font-weight: 1000;
+        transform: translate(-2px, 0);
+      }
+      .name-section {
+        background-color: #007bff; /* لون الخلفية */
+        color: #fff; /* لون النص */
+        padding: 20px; /* هوامش داخلية */
+        border-radius: 8px; /* تدوير الزوايا */
+        font-size: 24px; /* حجم الخط */
+        text-align: center; /* محاذاة النص */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل */
+      }
+      .btn {
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        width: 17rem;
+        overflow: hidden;
+        /* height: 3rem; */
+        background-size: 300% 300%;
+        /* backdrop-filter: blur(1rem); */
+        border-radius: 5rem;
+        transition: 0.5s;
+        animation: gradient_301 5s ease infinite;
+        border: double 4px transparent;
+        background-image: linear-gradient(
+            137.48deg,
+            #ffdb3b 10%,
+            #fe53bb 45%,
+            #8f51ea 67%,
+            #0044ff 87%
+          ),
+          linear-gradient(
+            137.48deg,
+            #ffdb3b 10%,
+            #fe53bb 45%,
+            #8f51ea 67%,
+            #0044ff 87%
+          );
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+      }
+
+      /* #container-stars {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: 0.5s;
+        backdrop-filter: blur(rem);
+        border-radius: 5rem;
+      } */
+
+      strong {
+        z-index: 2;
+        font-size: 17px;
+        letter-spacing: 5px;
+        color: #ffffff;
+        text-shadow: 0 0 4px white;
+      }
+
+      /* #glow {
+        position: absolute;
+        display: flex;
+        width: 12rem;
+      }
+
+      .circle {
+        width: 100%;
+        height: 30px;
+        filter: blur(2rem);
+        animation: pulse_3011 4s infinite;
+        z-index: -1;
+      }
+
+      .circle:nth-of-type(1) {
+        background: rgba(254, 83, 186, 0.636);
+      }
+
+      .circle:nth-of-type(2) {
+        background: rgba(142, 81, 234, 0.704);
+      } */
+
+   
+
+      /* #stars {
+        position: relative;
+        background: transparent;
+        width: 200rem;
+        height: 200rem;
+      }
+
+      #stars::after {
+        content: "";
+        position: absolute;
+        top: -10rem;
+        left: -100rem;
+        width: 100%;
+        height: 100%;
+        animation: animStarRotate 90s linear infinite;
+      }
+
+      #stars::after {
+        background-image: radial-gradient(#000000 1px, transparent 1%);
+        background-size: 50px 50px;
+      }
+
+      #stars::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 170%;
+        height: 500%;
+        animation: animStar 60s linear infinite;
+      }
+
+      #stars::before {
+        background-image: radial-gradient(#000000 1px, transparent 1%);
+        background-size: 50px 50px;
+        opacity: 0.5;
+      } */
+
+      @keyframes animStar {
+        from {
+          transform: translateY(0);
+        }
+
+        to {
+          transform: translateY(-135rem);
+        }
+      }
+
+      @keyframes animStarRotate {
+        from {
+          transform: rotate(360deg);
+        }
+
+        to {
+          transform: rotate(0);
+        }
+      }
+
+      @keyframes gradient_301 {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      @keyframes pulse_3011 {
+        0% {
+          transform: scale(0.75);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        }
+
+        70% {
+          transform: scale(1);
+          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+
+        100% {
+          transform: scale(0.75);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+      }
+      @media (max-width: 1070px) {
+        
+      
+        footer .container {
+          flex-direction: column;
+          align-items: center;
+
+      }
+      .footer-section-navigation ul{
+        flex-direction: column;
+        /* width: 300px; */
+     
+      }
+      /* .footerourproject {
+        padding-left: 60px;
+      } */
+      /* .footercontact {
+        padding-right: 30px;
+      } */
+      .footer-section , .footer-section-navigation {
+        width: 300px;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-section h3  {
+text-align: center;
+      }.footer-section-navigation ul  {
+display: flex;
+flex-direction: column;
+align-items: center;
+
+      }
+    }
+    /* تطبيق القواعد عندما يكون حجم الشاشة أقل من 1070 بكسل */
+@media (max-width: 1070px) {
+  .row-pt-md {
+   flex-direction: column;
+  }
+
+  .services {
+    width: 100%; /* جعل عرض الخدمات 100% */
+    margin: 0 auto 20px; /* إضافة هامش بين الخدمات */
+  }
+}
+
+@media (max-width:450px){
+  #ourproject {
+    margin: auto 20px;
+    padding: 0;
+    position: 0;
+  }
+}
+@media (max-width:370px){
+  #services .cards {
+        margin: 20px;
+        gap: 20px;
+      }
+      #services .cards .card:nth-child(odd) , #services .cards .card:nth-child(even) {
+        max-width: auto;
+      }
+      
+      .icon img {
+        border-radius: 10px;
+        width: 230px;
+        height: 140px;
+      }
+      .btn {
+        width: 220px;
+      }
+      footer h4 {
+        /* width: 270px; */
+        padding: 0 10px;
+      }
+      .footer-section , .footer-section-navigation {
+        width: 260px;
+      }
+}
+@media (max-width:317px){
+  #ourproject {
+    margin: auto 10px;
+  }
+
+  #services .cards {
+        margin: 10px;
+        gap: 10px;
+      }
+      #services .cards .card:nth-child(odd) , #services .cards .card:nth-child(even) {
+        max-width: auto;
+      }
+      
+      .icon img {
+        border-radius: 10px;
+        width: 200px;
+        height: 120px;
+      }
+}
+
+    </style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  let toggle = document.getElementById("toggle")
+  let nav = document.getElementById("nav")
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("active")
+    })
+  })
+</script>
+</head>
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo"><a href="geo top.html">GEO TOP</a></h1>
+        <i id="toggle" class="fa-solid fa-bars"></i>
+        <nav id="nav">
+
+          <ul>
+            <!-- <li>
+              <a href="#industries">Industries</a>
+              <ul class="linear-gradient">
+                <li><a href="#telecommunication">Telecommunication</a></li>
+                <li><a href="#transportation">Transportation</a></li>
+                <li><a href="#utilities">Utilities</a></li>
+              </ul>
+            </li> -->
+            <li >
+              <a href="#services">Services</a>
+              <ul class="linear-gradient">
+                <li><a href="#GIS">GIS</a></li>
+                <li><a href="#Website">Website design</a></li>
+                <li><a href="#Web">Web Development</a></li>
+                <li><a href="#Mobile">Mobile Applications</a></li>
+                <li><a href="#RS">RS</a></li>
+                <li><a href="#Lidaranalysis">Lidar analysis </a></li>
+                <li><a href="#Surveying">Surveying </a></li>
+                <li><a href="#BIM">BIM</a></li>
+                <li><a href="#3dmodeling">3d modeling</a></li>
+                <li><a href="#graphicdesign">graphic design</a></li>
+                <li><a href="#DigitalMarketing">Digital Marketing</a></li>
+                <li><a href="#training">Training</a></li>
+              </ul>
+            </li>
+            <li><a href="#ourproject">Our Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <!-- <li><a href="#careers">Careers</a></li> -->
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="video">
+      <video src="video.mp4" loop autoplay muted></video>
+      <div class="abs">
+        <h2>Welcome to Geo Top</h2>
+        <h2>Where the Future is Happening Now</h2>
+        <h3>
+          Geo Top is an information technology company and systems integrator,
+          providing renowned clients in Egypt, Africa and The Middle East with
+          top-notch solutions and services that help them achieve their business
+          transformation and digitalization goals.
+        </h3>
+      </div>
+    </section>
+    <section id="ourproject">
+      <button style="margin-top: 30px;" class="btn" type="button">
+        <strong>Our Projects</strong>
+      </button>
+      <!-- Content for ourproject -->
+
+      <div class="row row-pt-md">
+        <div class="col-md-4 text-center animate-box shape2">
+          <div class="services color-1" id="project1">
+            <div class="desc">
+              <h3>Clinic management website</h3>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center animate-box shape2">
+          <div class="services color-2">
+            <div class="desc">
+              <h3>Egypt Tours</h3>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center animate-box shape2">
+          <div class="services color-3">
+            <div class="desc">
+              <h3>utilities analysis</h3>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center animate-box shape2">
+          <div class="services color-4">
+            <div class="desc">
+              <h3>Surveying of a building</h3>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center animate-box shape2">
+          <div class="services color-5">
+            <div class="desc">
+              <h3>3D modeling of Al Balad Bank</h3>
+              <p>
+     
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center animate-box shape2">
+          <div class="services color-6">
+            <div class="desc">
+              <h3>dashboard</h3>
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- -------------------------- -->
+    <!-- <div id="container-stars">
+      <div id="stars"></div>
+    </div>
+    <div id="glow">
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div> -->
+     <!-- -------------------------- -->
+    <section id="services">
+      <button class="btn" type="button">
+        <strong>Services</strong>
+      </button>
+      <!-- Content for Services -->
+      <div class="cards">
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/gis.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>GIS</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/desin.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Website design</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/Web-Application.png" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Web Development</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/mobile.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Mobile Applications</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/rs.jpeg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>RS</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/lidar.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Drone image processing</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/Surveying.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Surveying</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/bim.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>BIM</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/3d.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>3d modeling</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/graphics-designing.png" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>graphic design</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/digital-marketing.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Digital Marketing</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+        <div class="card shape" id="shape">
+          <div class="icon">
+            <img src="img/trianing.jpg" alt="Service Icon" />
+          </div>
+          <div class="details">
+            <h2>Training</h2>
+            <p>
+              Description of the service goes here. It can be as long as needed
+              to provide all necessary information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <button style="margin-top: 30px;" class="btn" type="button">
+        <strong>Contact Us</strong>
+      </button>
+      <!-- Content for Contact Us -->
+      <div class="form-container">
+        <!-- <h1>Contact Us</h1> -->
+
+        <form action="/submit_form" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            id="phone"
+            name="phone"
+          />
+
+          <label for="message">Message:</label>
+          <textarea rows="6" cols="40" id="message" name="message"></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="careers">
+      <!-- Content for Careers -->
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <h4>
+            Geo Top is a premier provider of GIS solutions, offering advanced
+            technology and expert services globally. With a focus on innovation
+            and precision, Geo Top delivers tailored geospatial solutions to
+            empower organizations and drive success.
+          </h4>
+          <!-- About us content goes here -->
+        </div>
+        <div class="footer-section-navigation">
+          <ul>
+            <!-- <li>
+              <a href="#industries">Industries</a>
+              <ul>
+                <li><a href="#telecommunication">Telecommunication</a></li>
+                <li><a href="#transportation">Transportation</a></li>
+                <li><a href="#utilities">Utilities</a></li>
+              </ul>
+            </li> -->
+            <li style="min-width: 200px;">
+              <a class="h3" href="#services">Services</a>
+              <ul>
+                <li><a href="#GIS">GIS</a></li>
+                <li><a href="#Website">Website design</a></li>
+                <li><a href="#Web">Web Development</a></li>
+                <li><a href="#Mobile">Mobile Applications</a></li>
+                <li><a href="#RS">RS</a></li>
+                <li><a href="#Lidaranalysis">Lidar analysis </a></li>
+                <li><a href="#Surveying">Surveying </a></li>
+                <li><a href="#BIM">BIM</a></li>
+                <li><a href="#3dmodeling">3d modeling</a></li>
+                <li><a href="#graphicdesign">graphic design</a></li>
+                <li><a href="#DigitalMarketing">Digital Marketing</a></li>
+                <li><a href="#training">Training</a></li>
+              </ul>
+            </li>
+            <li><a class="footerourproject h3"  href="#ourproject">Our Projects</a></li>
+            <li class="footercontact h3" style="min-width: 250px;"> <a href="#contact">Contact Us</a>
+              <ul>
+                <li><a href="#GIS">Phone: 01204698455</a></li>
+                <li><a href="#Website">Email: moamenalmamly@gmail.com</a></li>
+              </ul>
+            </li>
+            <!-- <li><a href="#careers">Careers</a></li> -->
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-media-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+            <!-- Add more social media icons as needed -->
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      const shapes = document.querySelectorAll(".shape");
+      shapes.forEach((shape) => {
+        shape.addEventListener("mouseenter", () => {
+          const circle = document.createElement("div");
+          circle.classList.add("circle");
+          shape.appendChild(circle);
+
+          // الانتقال إلى الأعلى بشكل تدريجي
+          let position = 0;
+          const animateCircle = () => {
+            position -= 2; // التحرك إلى الأعلى بشكل تدريجي
+            circle.style.transform = `translateY(${position}px)`;
+            circle.style.zIndex = "2";
+            circle.style.backgroundColor = getRandomColor(); // استخدام لون عشوائي
+
+            // التوقف عندما يصل الدائرة إلى أعلى الصفحة
+            if (position > -window.innerHeight * 3) {
+              requestAnimationFrame(animateCircle);
+            }
+          };
+
+          // بدء الانيميشن
+          requestAnimationFrame(animateCircle);
+
+          // حذف الشكل بعد 7 ثواني
+          setTimeout(() => {
+            shape.removeChild(circle);
+          }, 8000);
+        });
+      });
+
+      const shapes2 = document.querySelectorAll(".shape2");
+
+      shapes2.forEach((shape) => {
+        shape.addEventListener("mouseenter", () => {
+          const square = document.createElement("div");
+          square.classList.add("square");
+          shape.appendChild(square);
+
+          let position = 0;
+          let rotation = 0;
+          const animateSquare = () => {
+            position += 2; // التحرك إلى الأعلى بشكل تدريجي
+            rotation += 1; // زيادة الزاوية بشكل تدريجي
+
+            square.style.transform = `translateY(${position}px) rotate(${rotation}deg)`;
+            square.style.backgroundColor = getRandomColor(); // استخدام لون عشوائي
+
+            // التوقف عندما يصل الدائرة إلى أعلى الصفحة
+            if (position > -window.innerHeight * 3) {
+              requestAnimationFrame(animateSquare);
+            }
+          };
+
+          // بدء الانيميشن
+          requestAnimationFrame(animateSquare);
+          setTimeout(() => {
+            shape.removeChild(square);
+          }, 8000);
+        });
+      });
+
+      // توليد لون عشوائي
+      function getRandomColor() {
+        const letters = "123456789";
+        let color = "#";
+        for (let i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    </script>
+  </body>
+</html>

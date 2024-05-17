@@ -1,0 +1,226 @@
+
+.row-pt-md {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+
+.col-md-4 {
+  flex: 0 0 calc(33.333% - 20px); /* تقسيم العناصر إلى 3 أجزاء بنسبة مئوية */
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  min-width:  250px;
+
+}
+
+.text-center {
+  text-align: center;
+}
+
+.animate-box {
+  /* أضف أنميشن إذا كنت بحاجة إليه */
+}
+
+.services {
+  /* استخدم هنا الألوان وأي خصائص ترغب في تطبيقها */
+}
+
+.desc {
+  /* أضف أي تنسيقات إضافية للوصف */
+}
+
+.services {
+  padding: 1.5em;
+  -webkit-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -moz-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -ms-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  -o-box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 0px 56px -8px rgba(0, 0, 0, 0.17);
+  border-bottom: 2px solid #2c98f0;
+  margin-bottom: 0;
+  height: 300px;
+}
+.services .icon2 {
+  display: block;
+  margin-bottom: 20px;
+}
+.services .icon2 i {
+  font-size: 30px;
+  color: #2c98f0;
+}
+.services h3 {
+  font-family: "Quicksand", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+.services.color-1 {
+  background-image: url("../img/pro\ \(1\).png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.services.color-2 {
+  border-bottom: 2px solid #ec5453;
+  background-image: url("../img/pro\ \(3\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services.color-2 .icon2 i {
+  color: #ec5453;
+}
+.services.color-3 {
+  border-bottom: 2px solid #f9bf3f;
+  
+  background-image: url("../img/pro\ gis.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services.color-3 .icon2 i {
+  color: #f9bf3f;
+}
+.services.color-4 {
+  border-bottom: 2px solid #a84cb8;
+  background-image: url("../img/pro\ \(2\).png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services.color-4 .icon2 i {
+  color: #a84cb8;
+}
+.services.color-5 {
+  border-bottom: 2px solid #2fa499;  
+  background-image: url("../img/33d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.services.color-6 {
+  border-bottom: 2px solid #4054b2;
+  background-image: url("../img/webdash.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services {
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (max-width: 768px) {
+  .services {
+    margin-bottom: 4em;
+  }
+}
+.services .icon {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  width: 100px;
+  height: 50px;
+  display: table;
+  margin: 0 auto;
+  background: #2c98f0;
+}
+.services .icon:before,
+.services .icon:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: "";
+}
+.services .icon:before {
+  top: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 50px 30px 50px;
+  border-color: transparent transparent #2c98f0 transparent;
+}
+.services .icon:after {
+  bottom: -30px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 50px 0 50px;
+  border-color: #2c98f0 transparent transparent transparent;
+}
+.services .icon i {
+  font-size: 30px;
+  color: #fff;
+  z-index: 1;
+  display: table-cell;
+  vertical-align: middle;
+}
+.services .desc {
+  margin-top: 0px;
+}
+.services .desc h3 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.services.color-2 .icon {
+  background: #ec5453;
+}
+.services.color-2 .icon:before {
+  border-color: transparent transparent #ec5453 transparent;
+}
+.services.color-2 .icon:after {
+  border-color: #ec5453 transparent transparent transparent;
+}
+.services.color-3 .icon {
+  background: #f9bf3f;
+}
+.services.color-3 .icon:before {
+  border-color: transparent transparent #f9bf3f transparent;
+}
+.services.color-3 .icon:after {
+  border-color: #f9bf3f transparent transparent transparent;
+}
+.services.color-4 .icon {
+  background: #a84cb8;
+}
+.services.color-4 .icon:before {
+  border-color: transparent transparent #a84cb8 transparent;
+}
+.services.color-4 .icon:after {
+  border-color: #a84cb8 transparent transparent transparent;
+}
+.services.color-5 .icon {
+  background: #2fa499;
+}
+.services.color-5 .icon:before {
+  border-color: transparent transparent #2fa499 transparent;
+}
+.services.color-5 .icon:after {
+  border-color: #2fa499 transparent transparent transparent;
+}
+.services.color-6 .icon {
+  background: #4054b2;
+}
+.services.color-6 .icon:before {
+  border-color: transparent transparent #4054b2 transparent;
+}
+.services.color-6 .icon:after {
+  border-color: #4054b2 transparent transparent transparent;
+}
+
+
+.row-pt-md {
+  padding-top: 3em;
+}
+
+.col-padding {
+  padding: 10px !important;
+}
+
+.js .animate-box {
+  opacity: 0;
+}
+.desc p {
+  color: #000;
+}
+.services {
+  margin-bottom: 0;
+}
